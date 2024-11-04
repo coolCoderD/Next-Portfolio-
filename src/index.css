@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #2a2d3e, #0f0f1a);
+}
+
+canvas {
+  touch-action: none;
+}
