@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ExternalLink, Code, Briefcase, User, Send } from 'lucide-react';
 import { ProjectCard } from './ProjectCard';
 import { Navigation } from './Navigation';
+import { TechStack } from './TechStack';
 
 const projects = [
   {
@@ -37,22 +38,22 @@ export function Content() {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen text-center flex items-center justify-center relative px-4">
+      <section id="home" className="min-h-screen mt-10 text-center flex items-center justify-center relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto w-full"
         >
-<h1 className="text-6xl font-black mb-6 bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent">
+<h1 className="text-8xl  font-black mb-6 bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent">
   Diksha Sharma
 </h1>
-          <h2 className="text-2xl text-gray-300 mb-12">
+          <h2 className="text-3xl text-gray-300 mb-12">
             Full Stack Developer & DSA Enthusiast
           </h2>
           
-          <div className="space-y-6">
-            <p className="text-gray-300 max-w-2xl ">
+          <div className="space-y-6 ">
+            <p className="text-gray-300 px-20 text-center text-xl ">
             Crafting immersive web experiences through creativity and technical skill. Proficient in MERN stack and DSA with Java, I bring efficiency and depth to every digital solution.
             </p>
             
@@ -91,6 +92,8 @@ export function Content() {
           </div>
         </motion.div>
       </section>
+            {/* Tech Stack Section */}
+            <TechStack />
 
       {/* Projects Section */}
       <section id="projects" className="min-h-screen py-20 px-4">
