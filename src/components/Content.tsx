@@ -5,38 +5,39 @@ import { Navigation } from './Navigation';
 
 const projects = [
   {
-    title: "AI-Powered Analytics Dashboard",
-    description: "Real-time data visualization platform with machine learning insights",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "TensorFlow.js", "D3.js"],
-    demo: "#",
-    code: "#"
+    title: "3D-Shirt-Store",
+    description: "Design your one-of-a-kind shirt with our advanced 3D customization tool, allowing you to personalize every detail for a unique and exclusive look tailored just for you.",
+    image: "https://res.cloudinary.com/drts3ztiy/image/upload/v1730829245/ljvapm2pwff708cg7cqz.png",
+    tags: ["React.js", "Three.js", "Tailwind CSS","Node.js","Express.js"],
+    demo: "https://shirt3d98.netlify.app/",
+    code: "https://github.com/coolCoderD/Shirt_3D_Store"
   },
   {
-    title: "Web3 DeFi Platform",
-    description: "Decentralized finance application with smart contract integration",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
-    tags: ["Solidity", "Next.js", "Web3.js"],
-    demo: "#",
-    code: "#"
+    title: "Ochi Design",
+    description: "Experience award-winning website design that combines captivating visuals, seamless navigation, and innovative features.",
+    image: "https://res.cloudinary.com/drts3ztiy/image/upload/v1730829243/vseru2z5pocqjr52hp0g.png",
+    tags: ["React.js", "Tailwind CSS", "Framer Motion","GSAP"],
+    demo: "https://ochi98.netlify.app/",
+    code: "https://github.com/coolCoderD/Ochi"
   },
   {
-    title: "3D Product Configurator",
-    description: "Interactive 3D product visualization tool for e-commerce",
-    image: "https://images.unsplash.com/photo-1633899306328-c5e70574aaa5?auto=format&fit=crop&w=800&q=80",
-    tags: ["Three.js", "React", "WebGL"],
-    demo: "#",
-    code: "#"
-  }
+    title: "BiTEZ",
+    description: "BiTEZ is a comprehensive MERN-based food ordering platform with a user-friendly interface, allowing customers to browse, like, and order food with secure payments, and includes an Admin Panel for menu management.",
+    image: "https://res.cloudinary.com/drts3ztiy/image/upload/v1730829249/vririigfsmv4kpjdj1ry.png",
+    tags: ["MERN", "Stripe", "Tailwind CSS","Cloudinary","Axios"],
+    demo: "https://bi-tez.vercel.app/",
+    code: "https://github.com/coolCoderD/BiTEZ"
+  },
+
 ];
 
 export function Content() {
   return (
-    <div className="absolute inset-0 overflow-auto">
+    <div className="absolute inset-0 overflow-auto px-9">
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
+      <section id="home" className="min-h-screen text-center flex items-center justify-center relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,23 +52,23 @@ export function Content() {
           </h2>
           
           <div className="space-y-6">
-            <p className="text-gray-300 max-w-2xl w-[80%]">
+            <p className="text-gray-300 max-w-2xl ">
             Crafting immersive web experiences through creativity and technical skill. Proficient in MERN stack and DSA with Java, I bring efficiency and depth to every digital solution.
             </p>
             
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <div className="flex space-x-6 items-center justify-center">
+              <a href="https://github.com/coolCoderD" className="text-gray-300 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/diksha-sharma-1781b8253/" className="text-gray-300 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:contact@example.com" className="text-gray-300 hover:text-white transition-colors">
+              <a href="mailto:dikshasharmahm@gmail.com" className="text-gray-300 hover:text-white transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-8">
+            <div className="flex flex-wrap gap-4 mt-8 justify-center">
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -99,7 +100,7 @@ export function Content() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-12">Featured Projects</h2>
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">A small selection of <span className='bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent'>recent projects</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -118,8 +119,8 @@ export function Content() {
             transition={{ duration: 0.8 }}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8"
           >
-            <h2 className="text-4xl font-bold text-white mb-8">Get in Touch</h2>
-            <form className="space-y-6">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Ready to take <span className="bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent">your</span>  digital presence to the next level?</h2>
+            {/* <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-white mb-2">Name</label>
                 <input
@@ -151,7 +152,8 @@ export function Content() {
               >
                 Send Message
               </motion.button>
-            </form>
+            </form> */}
+            <h3 className="text-gray-300">Reach out to me today, and let's discuss how I can help you achieve your goals.</h3>
           </motion.div>
         </div>
       </section>

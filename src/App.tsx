@@ -8,10 +8,10 @@ import { ScrollControls } from '@react-three/drei';
 
 function App() {
   return (
-    <div className="w-full h-screen bg-black relative">
+    <div className="w-full h-screen bg-black relative ">
       <Canvas>
         <ScrollControls pages={3} damping={0.1}>
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loader/>}>
             <Scene />
             <EffectComposer>
               <Bloom

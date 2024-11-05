@@ -19,7 +19,7 @@ export function ProjectCard({ title, description, image, tags, demo, code }: Pro
       <div className="relative h-48">
         <img
           src={image}
-          alt={title}
+          alt="project"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
