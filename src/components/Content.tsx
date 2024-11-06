@@ -103,7 +103,7 @@ export function Content() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">A small selection of <span className='bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent'>recent projects</span></h2>
+            <h2 className="text-5xl font-bold text-white mb-12 text-center">A small selection of <span className='bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent'>recent projects</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -122,7 +122,7 @@ export function Content() {
             transition={{ duration: 0.8 }}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8"
           >
-            <h2 className="text-4xl font-bold text-white mb-8 text-center">Ready to take <span className="bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent">your</span>  digital presence to the next level?</h2>
+            <h2 className="text-5xl font-bold text-white mb-8 text-center">Ready to take <span className="bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent">your</span>  digital presence to the next level?</h2>
             {/* <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-white mb-2">Name</label>
@@ -156,7 +156,7 @@ export function Content() {
                 Send Message
               </motion.button>
             </form> */}
-            <h3 className="text-gray-300">Reach out to me today, and let's discuss how I can help you achieve your goals.</h3>
+            <h3 className="text-gray-300 text-center">Reach out to me today, and let's discuss how I can help you achieve your goals.</h3>
           </motion.div>
         </div>
       </section>

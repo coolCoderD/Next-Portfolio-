@@ -7,13 +7,9 @@ export function Scene() {
   const particlesRef = useRef<THREE.Points>(null);
   const { mouse, viewport, size } = useThree();
   const scroll = useScroll();
-  const [radius, setRadius] = useState(viewport.width / 5); // Responsive radius
 
-  useEffect(() => {
-    // Update radius based on viewport width for responsiveness
-    const newRadius = viewport.width / 5;
-    setRadius(newRadius);
-  }, [viewport.width]);
+
+
 
   const particlesCount = 9000;
 
@@ -25,13 +21,13 @@ export function Scene() {
       const phi = Math.random() * Math.PI; // Vertical angle
 
       // Convert spherical to Cartesian coordinates
-      
+      const radius=3;
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta); // x
       positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta); // y
       positions[i * 3 + 2] = radius * Math.cos(phi); // z
     }
     return positions;
-  }, [radius]);
+  }, []);
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();

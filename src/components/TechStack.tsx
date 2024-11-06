@@ -52,20 +52,20 @@ export function TechStack() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-bold text-white dark:text-white mb-12 text-center ">My  <span className='bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent'>Tech Stack</span> </h2>
+          <h2 className="text-5xl font-bold text-white dark:text-white mb-12 text-center ">My  <span className='bg-gradient-to-r from-[#8888ff] to-[#ff88ff] bg-clip-text text-transparent'>Tech Stack</span> </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
             {Object.entries(technologies).map(([category, { icon, skills }]) => (
               <motion.div
                 key={category}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white/5 dark:bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10"
-              >
-                <div className="flex items-center gap-3 mb-4">
+                className="bg-white/5  dark:bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10"
+              > 
+                <div className="flex items-center gap-3 mb-4 ">
                   <div className="text-white dark:text-white">{icon}</div>
                   <h3 className="text-xl font-semibold text-white dark:text-white">{category}</h3>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 ">
                   {skills.map((skill) => (
                     <span
                       key={skill}
